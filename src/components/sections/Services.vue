@@ -1,7 +1,7 @@
 <template>
-  <section class="min-h-[100dvh] py-40 px-10 bg-lila text-gray text-center" id="services">
-    <h2 class="text-4xl font-bold mb-10">¿En qué podemos ayudarte?</h2>
-    <p class="mb-10 max-w-170 mx-auto">Acompañamos proyectos creativos, culturales y con propósito a darle forma su identidad y comunicar desde lo que los hace únicos. Nuestros servicios están pensados para que tu marca conecte co claridad, coherencia y personalidad.</p>
+  <section class="h-[90dvh] py-40 px-10 bg-lila text-gray text-center flex flex-col justify-center relative" id="services">
+    <h2 class="text-5xl font-bold mb-10">¿En qué podemos ayudarte?</h2>
+    <p class="mb-10 max-w-170 mx-auto text-lg">Acompañamos proyectos creativos, culturales y con propósito a darle forma su identidad y comunicar desde lo que los hace únicos. Nuestros servicios están pensados para que tu marca conecte co claridad, coherencia y personalidad.</p>
     <div class="cards flex justify-center gap-4">
       <Card
         v-for="(card, i) in cards"
