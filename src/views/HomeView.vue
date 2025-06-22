@@ -5,7 +5,7 @@
     <Hero />
     <Intro />
     <Services />
-    <Section3 />
+    <About />
     <Footer />
   </div>
 </template>
@@ -16,6 +16,6 @@ import LogoAnim from '@/components/LogoAnim.vue'
 import Hero from '@/components/Hero.vue'
 import Intro from '@/components/sections/Intro.vue'
 import Services from '@/components/sections/Services.vue'
-import Section3 from '@/components/sections/Section3.vue'
+import About from '@/components/sections/About.vue'
 import Footer from '@/components/Footer.vue'
 </script>
