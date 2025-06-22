@@ -1,9 +1,10 @@
 <template>
   <div class="home-view">
+    <LogoAnim/>
     <Navbar />
     <Hero />
-    <Section1 />
-    <Section2 />
+    <Intro />
+    <Services />
     <Section3 />
     <Footer />
   </div>
@@ -11,9 +12,10 @@
 
 <script setup>
 import Navbar from '@/components/Navbar.vue'
+import LogoAnim from '@/components/LogoAnim.vue'
 import Hero from '@/components/Hero.vue'
-import Footer from '@/components/Footer.vue'
-import Section1 from '@/components/sections/Section1.vue'
-import Section2 from '@/components/sections/Section2.vue'
+import Intro from '@/components/sections/Intro.vue'
+import Services from '@/components/sections/Services.vue'
 import Section3 from '@/components/sections/Section3.vue'
+import Footer from '@/components/Footer.vue'
 </script>
