@@ -1,5 +1,5 @@
 <template>
-  <section class="h-[100dvh] p-10" id="intro">
+  <section class="h-[100dvh] p-10">
     <h2 class="text-8xl mb-2 text-blue semibold tracking-tight font-semibold">
       Le damos<br/>
       rumbo a<br/>
