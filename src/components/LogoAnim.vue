@@ -1,6 +1,8 @@
 <template>
-  <div class="fixed w-full h-[100dvh] z-2">
-    <Logo class="logo-anim" :colorTop="logoTopColor" />
+  <div class="fixed w-full h-[100dvh] z-3 pointer-events-none">
+    <a href="#proa" class="logo-link logo-anim cursor-pointer pointer-events-auto" aria-label="Ir al inicio">
+      <Logo :colorTop="logoTopColor" :colorBottom="logoBottomColor" />
+    </a>
   </div>
 </template>
 
@@ -13,21 +15,32 @@ import Logo from '@/components/Logo.vue';
 gsap.registerPlugin(ScrollTrigger);
 
 const logoTopColor = ref('#cc5de8');
+const logoBottomColor = ref('#142c96');
 
 function handleScroll() {
   const logo = document.querySelector('.logo-anim');
   const services = document.getElementById('services');
-  if (!logo || !services) return;
+  const about = document.getElementById('about');
+  if (!logo || !services || !about) return;
   const logoRect = logo.getBoundingClientRect();
   const servicesRect = services.getBoundingClientRect();
-  // Si el logo se superpone con la sección Services
+  const aboutRect = about.getBoundingClientRect();
+  // Si el logo se superpone con la sección About
   if (
+    logoRect.bottom > aboutRect.top &&
+    logoRect.top < aboutRect.bottom
+  ) {
+    logoTopColor.value = '#dbdddd';
+    logoBottomColor.value = '#cc5de8';
+  } else if (
     logoRect.bottom > servicesRect.top &&
     logoRect.top < servicesRect.bottom
   ) {
     logoTopColor.value = '#dbdddd';
+    logoBottomColor.value = '#142c96';
   } else {
     logoTopColor.value = '#cc5de8';
+    logoBottomColor.value = '#142c96';
   }
 }
 
@@ -61,7 +74,8 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-.logo-anim {
+.logo-link {
+  display: block;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -71,5 +85,9 @@ onUnmounted(() => {
   height: auto;
   max-height: 50vh;
   will-change: transform, width, height, left, top;
+}
+.logo-anim {
+  width: 100%;
+  height: 100%;
 }
 </style>
