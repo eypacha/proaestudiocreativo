@@ -5,6 +5,7 @@
   --color-lila: #cc5de8;
   --color-gray: #dbdddd;
   --color-orange: #f9490d;
+  background-color: var(--color-gray);
 }
 html {
   scroll-behavior: smooth;
@@ -22,6 +23,10 @@ body {
 }
 
 .text-lustria {
+  font-family: 'Lustria', serif !important;
+}
+
+.hover\:text-lustria:hover {
   font-family: 'Lustria', serif !important;
 }
 
