@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar fixed w-full flex items-center justify-center px-8 py-4">
+  <nav class="navbar fixed w-full flex items-center justify-center px-8 py-4 z-2">
     <ul class="flex gap-0">
       <li v-for="(section, i) in sections" :key="i">
         <a
