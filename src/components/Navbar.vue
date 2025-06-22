@@ -28,7 +28,6 @@ import { ref, onMounted, onUnmounted } from 'vue';
 
 const sections = [
   { href: "#services", label: "Servicios", width: 120 },
-  { href: "#portfolio", label: "Porfolio", width: 110 },
   { href: "#aboutproa", label: "Sobre PROA", width: 130 },
   { href: "#contact", label: "Contacto", width: 100 },
 ];
