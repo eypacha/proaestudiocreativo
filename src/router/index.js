@@ -1,7 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+// import LandingView from '../views/LandingView.vue'
 
 const routes = [
+  // {
+  //   path: '/',
+  //   name: 'Landing',
+  //   component: LandingView
+  // },
   {
     path: '/',
     name: 'Home',
@@ -10,7 +16,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory('/'),
   routes
 })
 
