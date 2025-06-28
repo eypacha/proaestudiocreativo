@@ -1,10 +1,15 @@
 <template>
-  <nav class="navbar fixed w-full flex items-center justify-center px-8 py-5 z-2">
+  <nav
+    :class="[
+      'navbar w-full flex top-0 fixed items-center justify-center px-8 py-5 z-2 transition-colors duration-100',
+      sectionClasses[activeSection]?.bg || 'bg-gray',
+      sectionClasses[activeSection]?.text || 'text-blue'
+    ]"
+  >
     <ul class="flex gap-0">
       <li v-for="(section, i) in sections" :key="i">
         <a
           class="text-lg transition-colors hover:text-lustria"
-          :class="isOverServices ? 'text-gray' : 'text-blue'"
           :href="section.href"
           :style="
             section.width
@@ -24,32 +29,41 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+import { useLogoSectionState } from '@/composables/useLogoSectionState';
 
 const sections = [
-  { href: "#services", label: "Servicios", width: 120 },
-  { href: "#about", label: "Sobre PROA", width: 130 },
-  { href: "#contact", label: "Contacto", width: 100 },
+  {
+    href: "#proa",
+    label: "Subite a PROA",
+    width: 120,
+    id: 'proa',
+  },
+  {
+    href: "#services",
+    label: "Servicios",
+    width: 120,
+    id: 'services',
+  },
+  {
+    href: "#about",
+    label: "Nuestro rumbo",
+    width: 130,
+    id: 'about',
+  },
+  {
+    href: "#contact",
+    label: "Contacto",
+    width: 100,
+    id: 'contact',
+  },
 ];
 
-const isOverServices = ref(false);
+const sectionClasses = {
+  proa: { bg: 'bg-gray', text: 'text-blue' },
+  services: { bg: 'bg-lila', text: 'text-gray' },
+  about: { bg: 'bg-blue', text: 'text-gray' },
+  contact: { bg: 'bg-gray', text: 'text-blue' },
+};
 
-function checkOverlap() {
-  const navbar = document.querySelector('.navbar');
-  const services = document.getElementById('services');
-  if (!navbar || !services) return;
-  const navbarRect = navbar.getBoundingClientRect();
-  const servicesRect = services.getBoundingClientRect();
-  isOverServices.value =
-    navbarRect.bottom > servicesRect.top &&
-    navbarRect.top < servicesRect.bottom;
-}
-
-onMounted(() => {
-  window.addEventListener('scroll', checkOverlap, { passive: true });
-  checkOverlap();
-});
-onUnmounted(() => {
-  window.removeEventListener('scroll', checkOverlap);
-});
+const activeSection = useLogoSectionState(sections.map(s => s.id));
 </script>
