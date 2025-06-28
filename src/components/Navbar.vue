@@ -1,15 +1,11 @@
 <template>
   <nav
-    :class="[
-      'navbar w-full flex top-0 fixed items-center justify-center px-8 py-5 z-2 transition-colors duration-100',
-      sectionClasses[activeSection]?.bg || 'bg-gray',
-      sectionClasses[activeSection]?.text || 'text-blue'
-    ]"
+    class="navbar w-full flex top-0 bg-gray fixed items-center justify-center px-8 py-5 z-3 transition-colors duration-100"
   >
     <ul class="flex gap-0">
       <li v-for="(section, i) in sections" :key="i">
         <a
-          class="text-lg transition-colors hover:text-lustria"
+          class="text-lg transition-colors text-blue hover:text-lustria"
           :href="section.href"
           :style="
             section.width
