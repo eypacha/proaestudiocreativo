@@ -1,20 +1,27 @@
 <template>
-  <section class="h-[90dvh] py-40 px-10 bg-lila text-gray text-center flex flex-col justify-center relative" id="services">
+  <section
+    class="h-[90dvh] py-40 px-10 bg-lila text-gray text-center flex flex-col justify-center relative"
+    id="services"
+    ref="servicesSection"
+  >
     <h2 class="text-5xl font-bold mb-10">¿En qué podemos ayudarte?</h2>
     <p class="mb-10 max-w-170 mx-auto text-lg">Acompañamos proyectos creativos, culturales y con propósito a darle forma su identidad y comunicar desde lo que los hace únicos. Nuestros servicios están pensados para que tu marca conecte co claridad, coherencia y personalidad.</p>
-    <div class="cards flex justify-center gap-4">
+    <div class="cards flex justify-center gap-4" ref="cardsContainer">
       <Card
         v-for="(card, i) in cards"
         :key="i"
         :title="card.title"
         :text="card.text"
-        :class="{'mt-8': (i % 2 == 0)}" />
+        :class="{'mt-8': (i % 2 == 0)}"
+      />
     </div>
   </section>
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted, nextTick } from 'vue'
 import Card from '../Card.vue'
+import gsap from 'gsap'
 
 const cards = [
   {
@@ -40,4 +47,40 @@ const cards = [
   } 
 ]
 
+const servicesSection = ref(null)
+const cardsContainer = ref(null)
+let observer = null
+
+onMounted(async () => {
+  await nextTick()
+  const cardsEls = cardsContainer.value?.children
+  if (!cardsEls) return
+
+  gsap.set(cardsEls, { y: 80, opacity: 0 })
+
+  observer = new window.IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        gsap.to(cardsEls, {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          stagger: 0.15,
+          ease: 'power3.out'
+        })
+        observer.disconnect()
+      }
+    })
+  }, { threshold: 1 })
+
+  if (servicesSection.value) {
+    observer.observe(servicesSection.value)
+  }
+})
+onUnmounted(() => {
+  if (observer) observer.disconnect()
+})
 </script>
+
+<style scoped>
+</style>
