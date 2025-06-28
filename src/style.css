@@ -64,3 +64,15 @@ body {
 .bg-orange {
   background-color: var(--color-orange) !important;
 }
+
+.border-blue {
+  border-color: var(--color-blue) !important;
+}
+
+.border-lila {
+  border-color: var(--color-lila) !important;
+}
+
+.border-gray {
+  border-color: var(--color-gray) !important;
+}
