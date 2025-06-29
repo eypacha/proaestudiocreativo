@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./primevue.css";
 
 :root {
   --color-blue: #142c96;
