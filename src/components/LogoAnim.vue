@@ -15,7 +15,7 @@ import Logo from '@/components/Logo.vue';
 gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
-  // El logo inicia en 50vw, termina en 100px
+  
   gsap.to('.logo-anim', {
     width: 70,
     height: 50,
@@ -23,8 +23,8 @@ onMounted(() => {
     minHeight: 50,
     maxWidth: 70,
     maxHeight: 50,
-    left: '20px', // 20px de margen
-    top: '8px',
+    left: '32px',
+    top: '14px',
     x: 0,
     y: 0,
     transform: 'translate(0, 0)',

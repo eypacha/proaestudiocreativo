@@ -1,31 +1,40 @@
 <template>
   <nav
-    class="navbar w-full flex top-0 bg-gray fixed items-center justify-center px-8 py-5 z-3 transition-colors duration-100"
+    class="navbar w-full flex items-center justify-between top-0 bg-gray fixed px-8 py-5 z-3 transition-colors duration-100"
   >
-    <ul class="flex gap-0">
-      <li v-for="(section, i) in sections" :key="i">
-        <a
-          class="text-lg transition-colors text-blue hover:text-lustria"
-          :href="section.href"
-          :style="
-            section.width
-              ? {
-                  width: section.width + 'px',
-                  display: 'inline-block',
-                  textAlign: 'center',
-                }
-              : {}
-          "
-        >
-          {{ section.label }}
-        </a>
-      </li>
-    </ul>
+   <div class="flex-none w-30">
+    </div>
+    <div class="flex-1 flex justify-center">
+      <ul class="flex gap-0">
+        <li v-for="(section, i) in sections" :key="i">
+          <a
+            class="text-lg transition-colors text-blue hover:text-lustria"
+            :href="section.href"
+            :style="
+              section.width
+                ? {
+                    width: section.width + 'px',
+                    display: 'inline-block',
+                    textAlign: 'center',
+                  }
+                : {}
+            "
+          >
+            {{ section.label }}
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="flex-none">
+      <Button label="Hablemos" class="w-30" />
+    </div>
   </nav>
 </template>
 
 <script setup>
+import Button from "primevue/button";
 import { useLogoSectionState } from '@/composables/useLogoSectionState';
+
 
 const sections = [
   {
