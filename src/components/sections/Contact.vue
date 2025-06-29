@@ -23,12 +23,12 @@
       </div>
       <div>
         <FloatLabel>
-          <Textarea id="mensaje" v-model="mensaje" rows="2" />
+          <InputText id="mensaje" v-model="mensaje" />
           <label for="mensaje">Mensaje</label>
         </FloatLabel>
       </div>
       <div class="flex justify-center">
-        <Button label="Enviar" class="w-40" />
+        <Button label="Enviar" class="w-30" />
       </div>
     </form>
   </section>
@@ -36,7 +36,6 @@
 
 <script setup>
 import InputText from "primevue/inputtext";
-import Textarea from "primevue/textarea";
 import FloatLabel from "primevue/floatlabel";
 import Button from "primevue/button";
 import { ref } from 'vue';
