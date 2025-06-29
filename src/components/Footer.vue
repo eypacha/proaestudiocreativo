@@ -1,19 +1,19 @@
 <template>
-  <footer class="waves relative py-6 text-center bg-blue text-white text-base flex items-center justify-center gap-17">
+  <footer class="waves relative pt-3 pb-20 text-center bg-blue text-white text-base flex items-center justify-center gap-17">
     <div class="bg-lila rounded-full">
-      <IconWhatsapp color="#dbdddd"/>
+      <IconWhatsapp color="#dbdddd" class="w-15 h-15"/>
     </div>
     <div class="bg-lila rounded-full">
-      <IconInstagram color="#dbdddd"/>
+      <IconInstagram color="#dbdddd" class="w-15 h-15"/>
     </div>
     <div class="bg-lila rounded-full">
-      <IconEnvelope color="#dbdddd"/>
+      <IconEnvelope color="#dbdddd" class="w-15 h-15"/>
     </div>
     <div class="bg-lila rounded-full">
-      <IconFacebook color="#dbdddd"/>
+      <IconFacebook color="#dbdddd" class="w-15 h-15"/>
     </div>
     <div class="bg-lila rounded-full">
-      <IconLinkedin color="#dbdddd"/>
+      <IconLinkedin color="#dbdddd" class="w-15 h-15"/>
     </div>
   </footer>
 </template>
