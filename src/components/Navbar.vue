@@ -1,8 +1,9 @@
 <template>
   <nav
-    class="navbar w-full flex items-center justify-between top-0 bg-gray fixed px-8 py-5 z-3 transition-colors duration-100"
+    class="navbar w-full flex items-center justify-between top-0 fixed px-8 py-5 z-3 transition-colors duration-100"
+    :style="{ backgroundColor: color }"
   >
-   <div class="flex-none w-30">
+    <div class="flex-none w-30">
     </div>
     <div class="flex-1 flex justify-center">
       <ul class="flex gap-0">
@@ -10,15 +11,7 @@
           <a
             class="text-lg transition-colors text-blue hover:text-lustria"
             :href="section.href"
-            :style="
-              section.width
-                ? {
-                    width: section.width + 'px',
-                    display: 'inline-block',
-                    textAlign: 'center',
-                  }
-                : {}
-            "
+            :style="section.width ? { width: section.width + 'px', display: 'inline-block', textAlign: 'center' } : {}"
           >
             {{ section.label }}
           </a>
@@ -32,9 +25,18 @@
 </template>
 
 <script setup>
+import { defineProps } from 'vue';
 import Button from "primevue/button";
 import { useLogoSectionState } from '@/composables/useLogoSectionState';
 
+const props = defineProps({
+  color: {
+    type: String,
+    default: '#dbdddd',
+  },
+});
+
+const color = props.color;
 
 const sections = [
   {
