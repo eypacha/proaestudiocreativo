@@ -1,6 +1,6 @@
 <template>
   <section
-    class="relative h-[100dvh] p-20 px-10 bg-gray text-blue flex flex-col items-center justify-center"
+    class="relative w-full pt-30 pb-20 px-10 bg-gray text-blue flex flex-col items-center justify-center flex-1"
     id="contact"
   >
     <h2 class="text-4xl font-bold mb-2">¿Tenés un proyecto en mente?</h2>
