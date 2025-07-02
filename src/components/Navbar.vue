@@ -42,8 +42,14 @@ const sections = [
   {
     href: "#proa",
     label: "Subite a PROA",
-    width: 120,
+    width: 160,
     id: 'proa',
+  },
+  {
+    href: "#about",
+    label: "Nuestro rumbo",
+    width: 140,
+    id: 'about',
   },
   {
     href: "#services",
@@ -52,10 +58,10 @@ const sections = [
     id: 'services',
   },
   {
-    href: "#about",
-    label: "Nuestro rumbo",
-    width: 130,
-    id: 'about',
+    href: "#testimonials",
+    label: "Testimonios",
+    width: 120,
+    id: 'testimonials',
   },
   {
     href: "#contact",
