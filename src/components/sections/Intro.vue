@@ -1,11 +1,11 @@
 <template>
-  <section class="h-[100dvh] p-10">
-    <h2 class="text-8xl mb-2 text-blue semibold tracking-tight font-semibold">
+  <section class="p-10 pb-50">
+    <h2 class="text-9xl mb-2 text-blue bold leading-26 tracking-tight font-semibold">
       Le damos<br/>
       rumbo a<br/>
       tu marca<br/>
       con
-      <span class="inline-block relative h-12 text-lustria text-lila text-[5rem] -top-[18px]">
+      <span class="inline-block relative h-12 text-lustria text-lila text-[7rem] -top-10">
         <span
           v-for="(word, wIdx) in adjetives"
           :key="wIdx"
@@ -21,11 +21,16 @@
         </span>
       </span>
     </h2>
+    <div class="text-right text-blue text-3xl font-bold">
+      <p class="mr-5">Conocé lo</p>
+      <Button label="que hacemos" size="large"/>
+    </div>
   </section>
 </template>
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
+import Button from "primevue/button";
 
 const adjetives = ref([
   'estrategia',

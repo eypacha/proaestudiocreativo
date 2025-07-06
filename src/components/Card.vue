@@ -6,7 +6,7 @@
       <div class="bg-blue rounded-lg aspect-[5/4]">
       </div>
       <div class="flex-1 text-left px-1">
-        <h3 class="w-full text-balance font-bold mb-2">{{ title }}</h3>
+        <h3 class="w-full text-lg text-balance leading-4 font-bold mb-2">{{ title }}</h3>
         <p class="text-sm font-medium mt-1 leading-4" v-if="subtitle">{{ subtitle }}</p>
       </div>
     </div>

@@ -1,33 +1,54 @@
 <template>
   <section
-    class=" py-40 px-10 bg-lila text-gray text-center flex flex-col justify-center relative"
+    class="pt-40 bg-lila text-gray flex flex-col justify-center relative"
     id="services"
     ref="servicesSection"
   >
-    <h2 class="text-5xl font-bold mb-10">¿En qué podemos ayudarte?</h2>
-    <p class="mb-10 max-w-170 mx-auto text-lg">
-      Acompañamos proyectos creativos, culturales y con propósito a darle forma
-      su identidad y comunicar desde lo que los hace únicos. Nuestros servicios
-      están pensados para que tu marca conecte co claridad, coherencia y
-      personalidad.
-    </p>
-    <div class="cards flex justify-center gap-4" ref="cardsContainer">
-      <Card
-        v-for="(card, i) in cards"
-        :key="i"
-        :title="card.title"
-        :subtitle="card.subtitle"
-        :text="card.text"
-        :class="{ 'mt-8': i % 2 == 0 }"
-      />
+    <div class="flex max-w-200 mx-auto">
+      <div class="w-full md:w-1/2">
+        <h2 class="text-7xl font-bold mb-10">
+          ¿En qué <span class="text-lustria text-blue">podemos ayudarte?</span>
+        </h2>
+      </div>
+      <div class="w-full md:w-1/2 text-justify text-lg">
+        <p>Te ayudamos a darle forma a lo que hacés para que tu proyecto tenga dirección, identidad y presencia.</p>
+        <p>Trabajamos con vos para construir una marca que realmente te represente.</p>
+        <p>Nuestros servicios están pensados para que puedas conectar con tu audiencia con claridad, coherencia y personalidad.</p>
+      </div>
+    </div>
+    <div>
+      <div class="max-w-200 mx-auto">
+        <IconHelm class="mb-2"/>
+        <p class="uppercase font-bold text-2xl max-w-130 w-full">
+          No se trata de sólo de diseño,<br/>
+          se trata de contar bien lo que hacés,<br/>
+          para conectar con quien lo necesita</p>
+      </div>
+    </div>
+   <div class="pt-20 pb-60">
+      <div class="cards flex justify-center gap-4" ref="cardsContainer">
+        <Card
+          v-for="(card, i) in cards"
+          :key="i"
+          :title="card.title"
+          :subtitle="card.subtitle"
+          :text="card.text"
+          :class="{ 'mt-8': i % 2 == 0 }"
+        />
+      </div>
+    </div>
+    <div class="absolute waves w-full h-40 bottom-0">
+
     </div>
   </section>
 </template>
 
 <script setup>
 import { ref, onMounted, onUnmounted, nextTick } from "vue";
-import Card from "../Card.vue";
 import gsap from "gsap";
+
+import Card from "../Card.vue";
+import IconHelm from "../icons/iconHelm.vue";
 
 const cards = [
   {
@@ -78,7 +99,7 @@ onMounted(async () => {
         }
       });
     },
-    { threshold: 1 }
+    { threshold: 0, rootMargin: "-1px 0px 0px 0px" }
   );
 
   if (servicesSection.value) {

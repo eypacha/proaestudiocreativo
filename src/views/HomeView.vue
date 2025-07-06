@@ -4,8 +4,9 @@
     <Navbar />
     <Hero />
     <Intro />
-    <Services />
     <About />
+    <Services />
+    <Testimonial/>
     <div class="min-h-[100dvh] flex flex-col items-center justify-between">
       <Contact/>
       <Footer/>
@@ -20,6 +21,7 @@ import LogoAnim from '@/components/LogoAnim.vue'
 import Hero from '@/components/Hero.vue'
 import Intro from '@/components/sections/Intro.vue'
 import Services from '@/components/sections/Services.vue'
+import Testimonial from '@/components/sections/Testimonials.vue'
 import About from '@/components/sections/About.vue'
 import Contact from '@/components/sections/Contact.vue'
 import Footer from '@/components/Footer.vue'

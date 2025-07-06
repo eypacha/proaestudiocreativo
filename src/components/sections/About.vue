@@ -1,17 +1,40 @@
 <template>
-  <section class="relative h-[100dvh] p-20 px-10 bg-blue text-gray flex flex-col items-center justify-center outline flex-1" id="about">
-    <h2  @mousemove="handleMouseMove" @mouseleave="resetSkew" class="text-8xl font-bold mb-2 cursor-default p-20">
-      Cari
+  <section class="relative py-20 px-10 bg-blue text-gray flex flex-col outline flex-1" id="about">
+    <h2 @mousemove="handleMouseMove" @mouseleave="resetSkew" class="text-8xl mb-20 cursor-default">
+      <span class="font-bold mr-3 uppercase">Nuesto</span>
       <span ref="skewTarget" class="text-lustria text-lila skewed-text inline-block">
-        te amo
-      </span>
+        rumbo
+      </span><br/>
+      <span class="font-bold text-lila mr-6">PROA</span>
+      <span class="font-bold">Estudio Creativo</span>
     </h2>
+    <div class="text-2xl w-full mx-auto max-w-300 mb-10">
+      <p class="mb-6">En PROA trabajamos con marcas creativas, culturales y con propósito que quieren comunicar lo que hacen de forma clara, auténtica y con estrategia</p>
+      <p class="mb-6">Nos gusta lo simple, lo real, lo que tiene algo para contar y compartir. No creemos en fórmulas mágicas: creemos en crear desde tu historia, tus valores y tu estilo.</p>
+      <p class="mb-6">Diseñamos, comunicamos y desarrollamos estrategias que representen lo que sos y conecten con quienes te está buscando</p>
+    </div>
+    <div class="">
+     <div>
+       <IconHelm class="mb-2"/>
+      <p class="uppercase font-bold text-2xl w-full">
+        Le damos rumbo a tu marca para que puedas,<br/>
+        mostrar y vender con confianza,<br/>
+        coherencia y alineada a tus valores</p>
+     </div>
+     <div class="text-right text-gray text-3xl font-bold">
+      <p class="mr-3 leading-7 mb-2">Quiero<br/> encontrar</p>
+      <Button label="el rumbo" size="large"/>
+    </div>
+    </div>
+    
   </section>
 </template>
 
 <script setup>
 import { ref } from 'vue'
 import { gsap } from 'gsap'
+import IconHelm from "../icons/iconHelm.vue";
+import Button from "primevue/button";
 
 const skewTarget = ref(null)
 
