@@ -1,6 +1,6 @@
 <template>
   <div class="waves w-full">
-    <footer class="relative pt-15 pb-20 text-center text-white text-base flex items-center justify-center gap-6 md:gap-10">
+    <footer class="relative pt-18 pb-17 text-center text-white text-base flex items-center justify-center gap-5 md:gap-10">
       <a
         v-for="(icon, i) in icons"
         :key="i"
