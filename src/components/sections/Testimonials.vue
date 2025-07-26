@@ -1,23 +1,26 @@
 <template>
-  <section class="relative h-[100dvh] p-20 px-10 bg-gray text-blue flex flex-col items-center justify-center" id="testimonials">
-    <h2 class="uppercase text-6xl text-center">
-      <span class="font-bold">Historias que encontraro forma y dirección,<br/></span>
-      <span class="text-lustria">que nos recuerdan por qué hacemos lo que hacemos</span>
+  <section class="relative p-40 px-4 md:px-10 bg-gray text-blue flex flex-col items-center justify-center" id="testimonials">
+    <h2 class="uppercase text-center">
+      <span class="font-bold text-3xl md:text-[40px]">Historias que encontraro rumbo y dirección,<br/></span>
+      <span class="text-lustria text-3xl md:text-4xl">que nos recuerdan por qué hacemos lo que hacemos</span>
     </h2>
-    <div class="w-full max-w-[1400px] mx-auto mt-10 flex flex-col md:flex-row gap-20 text-center text-2xl">
+    <div class="w-full mt-20 flex flex-col md:flex-row gap-20">
       <div class="flex-1">
-        <p class="mb-4">Trabajar con PROA fue un antes y un después para mi proyecto. Tenía mil ideas sueltas y no sabía cómo ordenarlas ni cómo comunicar lo que hacía. En las asesorías me sentí súper escuchada, entendieron al toque lo que quería transmitir y lo transformaron en una estrategia clara y visualmente hermosa. Ahora mi marca tiene identidad, coherencia y, lo más importante, me siento cómoda mostrando lo que hago.</p>
-        <p>Mica y Vale, AMARU Circo</p>
+        <Testimonial text="La asesoría me sirvió muchísimo. No había pensado mi esquema de trabajo en redes de una forma tan clara y me di cuenta de que me faltaban herramientas para saber qué decir, qué es realmente útil y qué no. Me fui muy contenta y súper agradecida, además el encuentro duró más de lo previsto y sentí que se dedicaron a fondo." name="Karen, Tinto Rebelde"/>
       </div>
-      <div class="flex-1 text-center">
-        <p class="mb-4">Trabajar con PROA fue un antes y un después para mi proyecto. Tenía mil ideas sueltas y no sabía cómo ordenarlas ni cómo comunicar lo que hacía. En las asesorías me sentí súper escuchada, entendieron al toque lo que quería transmitir y lo transformaron en una estrategia clara y visualmente hermosa. Ahora mi marca tiene identidad, coherencia y, lo más importante, me siento cómoda mostrando lo que hago.</p>
-        <p>Karen, Tinto</p>
+      <div class="flex-1">
+        <Testimonial text="La asesoría me sirvió muchísimo. No había pensado mi esquema de trabajo en redes de una forma tan clara y me di cuenta de que me faltaban herramientas para saber qué decir, qué es realmente útil y qué no. Me fui muy contenta y súper agradecida, además el encuentro duró más de lo previsto y sentí que se dedicaron a fondo." name="Karen, Tinto Rebelde"/>
+      </div>
+      <div class="flex-1">
+        <Testimonial text="La asesoría me sirvió muchísimo. No había pensado mi esquema de trabajo en redes de una forma tan clara y me di cuenta de que me faltaban herramientas para saber qué decir, qué es realmente útil y qué no. Me fui muy contenta y súper agradecida, además el encuentro duró más de lo previsto y sentí que se dedicaron a fondo." name="Karen, Tinto Rebelde"/>
       </div>
     </div>
+    
   </section>
 </template>
 
 <script setup>
+import Testimonial from '../Testimonial.vue';
 </script>
 
 <style scoped>
