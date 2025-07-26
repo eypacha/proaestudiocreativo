@@ -30,7 +30,7 @@
       </button>
     </div>
     <!-- Drawer para mobile -->
-    <Sidebar v-model:visible="drawerVisible" position="right" class="md:hidden" :style="{ width: '240px' }" :showCloseIcon="false">
+    <Sidebar v-model:visible="drawerVisible" position="right" class="md:hidden" :style="{ width: '166px' }" :showCloseIcon="false">
       <div class="flex justify-end p-4">
         <button @click="drawerVisible = false" aria-label="Cerrar menú" class="text-2xl text-gray hover:text-blue focus:outline-none">
           <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
