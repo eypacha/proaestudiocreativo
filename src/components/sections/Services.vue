@@ -4,42 +4,62 @@
     id="services"
     ref="servicesSection"
   >
-    <div class="flex max-w-200 mx-auto">
-      <div class="w-full md:w-1/2">
-        <h2 class="text-7xl font-bold mb-10">
-          ¿En qué <span class="text-lustria text-blue">podemos ayudarte?</span>
-        </h2>
+    <div class="px-10">
+      <div class="flex flex-col md:flex-row p-5 md:p-0 mb-10">
+        <div class="w-full md:w-1/2">
+            <h2 class="text-5xl md:text-8xl font-bold mb-10 w-min mx-auto">
+            ¿En qué
+            <span class="text-lustria text-blue">podemos ayudarte?</span>
+          </h2>
+        </div>
+        <div class="w-full md:w-1/2 text-justify text-xl pr-20 flex flex-col justify-end mb-13 font-medium">
+          <p>
+            Te ayudamos a darle forma a lo que hacés para que tu proyecto tenga
+            dirección, identidad y presencia.
+          </p>
+          <p>
+            Trabajamos con vos para construir una marca que realmente te
+            represente.
+          </p>
+          <p>
+            Nuestros servicios están pensados para que puedas conectar con tu
+            audiencia con claridad, coherencia y personalidad.
+          </p>
+        </div>
       </div>
-      <div class="w-full md:w-1/2 text-justify text-lg">
-        <p>Te ayudamos a darle forma a lo que hacés para que tu proyecto tenga dirección, identidad y presencia.</p>
-        <p>Trabajamos con vos para construir una marca que realmente te represente.</p>
-        <p>Nuestros servicios están pensados para que puedas conectar con tu audiencia con claridad, coherencia y personalidad.</p>
+      <div class="flex">
+        <div class="p-4 md:p-0 w-full md:w-1/2">
+          <div class="w-fit mx-auto">
+            <IconHelm class="mb-2" />
+            <p class="uppercase font-bold text-xl max-w-130 w-full">
+              No se trata de sólo de diseño,<br />
+              se trata de contar bien lo que hacés,<br />
+              para conectar con quien lo necesita
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div>
-      <div class="max-w-200 mx-auto">
-        <IconHelm class="mb-2"/>
-        <p class="uppercase font-bold text-2xl max-w-130 w-full">
-          No se trata de sólo de diseño,<br/>
-          se trata de contar bien lo que hacés,<br/>
-          para conectar con quien lo necesita</p>
-      </div>
-    </div>
-   <div class="pt-20 pb-60">
-      <div class="cards flex justify-center gap-4" ref="cardsContainer">
-        <Card
-          v-for="(card, i) in cards"
-          :key="i"
-          :title="card.title"
-          :subtitle="card.subtitle"
-          :text="card.text"
-          :class="{ 'mt-8': i % 2 == 0 }"
-        />
-      </div>
-    </div>
-    <div class="absolute waves w-full h-40 bottom-0">
 
+     
+
+
+      <div class="pt-20 pb-60">
+        <div
+          class="cards flex justify-center gap-7 flex-wrap"
+          ref="cardsContainer"
+        >
+          <Card
+            v-for="(card, i) in cards"
+            :key="i"
+            :title="card.title"
+            :subtitle="card.subtitle"
+            :text="card.text"
+            :class="{ 'md:mt-8': i % 2 == 0 }"
+          />
+        </div>
+      </div>
     </div>
+    <div class="absolute waves w-full h-40 bottom-0"></div>
   </section>
 </template>
 
@@ -52,19 +72,20 @@ import IconHelm from "../icons/iconHelm.vue";
 
 const cards = [
   {
-    title: "Asesoría Estratégica",
-    subtitle: "¿Tenés muchas ideas y no sabés por dónde empezar?",
+    title: "Asesoría <br/> Estratégica",
+    subtitle: "¿Tenés muchas ideas pero no sabés por dónde empezar?",
     text: "Acompañamos a marcas y proyectos a definir su propósito, misión, visión y valores. Creamos estrategias de comunicación y marketing que conectan con tu audiencia.",
   },
   {
     title: "Gestión Integral de Redes",
-    subtitle: "¿Las redes te quitan más energía de la que querés dedicarles?",
+    subtitle: "¿Las redes te demandan más energía de la que querés darles?",
     text: "Nos encargamos de la creación, planificación y gestión de tus redes sociales, generando contenido relevante y atractivo para tu audiencia.",
   },
   {
-    title: "Contenido Audiovisual",
-    subtitle: "¿Querés mostrar tu proyecto de forma real, creativa?",
-    text: "Desarrollamos contenido audiovisual de alta calidad, incluyendo fotografía, video y animación, para potenciar tu presencia en línea.",
+    title: "Contenido visual: fotografía & video",
+    subtitle:
+      "¿Querés mostrar tu proyecto de forma real, creativa y sin poses?",
+    text: "Creamos piezas visuales pensadas para mostrar tu proyecto tal como es: real, dinámico y con identidad. Reels, videos, fotos y contenido detrás de escena que conectan con tu audiencia y transmiten tu forma de trabajar. Sin poses forzadas ni fórmulas vacías.",
   },
   {
     title: "Diseño Web & E-Commerce",
