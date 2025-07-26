@@ -1,13 +1,17 @@
 <template>
   <div class="fixed w-full h-[100dvh] z-4 pointer-events-none">
-    <a href="#proa" class="logo-link logo-anim cursor-pointer pointer-events-auto" aria-label="Ir al inicio">
-      <Logo  />
+    <a
+      href="#proa"
+      class="logo-anim cursor-pointer pointer-events-auto block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[50vw] max-w-[50vw] h-auto max-h-[50vh]"
+      aria-label="Ir al inicio"
+    >
+      <Logo />
     </a>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+import { onMounted } from 'vue';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import Logo from '@/components/Logo.vue';
@@ -15,8 +19,7 @@ import Logo from '@/components/Logo.vue';
 gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
-  
-  gsap.to('.logo-anim', {
+  const anim = gsap.to('.logo-anim', {
     width: 70,
     height: 50,
     minWidth: 70,
@@ -33,27 +36,31 @@ onMounted(() => {
       start: 'top top',
       end: '+=400',
       scrub: true,
+      invalidateOnRefresh: true
     },
+  });
+
+  ScrollTrigger.addEventListener('refresh', () => {
+    if (window.scrollY >= 400) {
+      const el = document.querySelector('.logo-anim');
+      if (el) {
+        el.style.left = '32px';
+        el.style.top = '14px';
+        el.style.width = '70px';
+        el.style.height = '50px';
+        el.style.transform = 'translate(0, 0)';
+      }
+      if (anim.scrollTrigger) {
+        anim.scrollTrigger.disable();
+      }
+    }
   });
 });
 
 </script>
 
 <style scoped>
-.logo-link {
-  display: block;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 50vw;
-  max-width: 50vw;
-  height: auto;
-  max-height: 50vh;
-  will-change: transform, width, height, left, top;
-}
 .logo-anim {
-  width: 100%;
-  height: 100%;
+  will-change: transform, width, height, left, top;
 }
 </style>
