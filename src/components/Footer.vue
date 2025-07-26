@@ -2,7 +2,7 @@
   <div class="waves w-full">
     <footer class="relative pt-15 pb-20 text-center text-white text-base flex items-center justify-center gap-17">
       <div v-for="(icon, i) in icons" :key="i" class="bg-lila rounded-full cursor-pointer">
-        <component :is="icon.component" color="#dbdddd" class="w-15 h-15" />
+        <component :is="icon.component" color="#dbdddd" class="w-10 h-10" />
       </div>
     </footer>
   </div>
