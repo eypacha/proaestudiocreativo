@@ -8,10 +8,10 @@
       @mouseleave="resetSkew"
       class="text-5xl md:text-8xl mb-20 cursor-default"
     >
-      <span class="font-bold mr-3 uppercase">Nuesto</span>
+      <span class="font-bold mr-3 uppercase">Nuestro</span>
       <span
         ref="skewTarget"
-        class="text-lustria text-lila skewed-text inline-block"
+        class="text-lustria text-lila skewed-text inline-block text-[120px]"
       >
         rumbo </span
       ><br />
@@ -79,5 +79,3 @@ function resetSkew() {
   gsap.to(el, { skewX: 0, duration: 0.6, ease: "power2.out" });
 }
 </script>
-
-<style scoped></style>
