@@ -43,9 +43,9 @@
      
 
 
-      <div class="pt-20 pb-60">
+      <div class="pt-20 pb-50">
         <div
-          class="cards flex justify-center gap-7 flex-wrap"
+          class="cards flex justify-center gap-9 flex-wrap"
           ref="cardsContainer"
         >
           <Card

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="card relative w-52 h-73 [perspective:1000px]"
+    class="card relative w-59 h-82 [perspective:1000px]"
     @touchstart="flipped = !flipped"
     @mouseenter="flipped = true"
     @mouseleave="flipped = false"
@@ -15,7 +15,7 @@
         <div class="bg-blue rounded-lg aspect-[5/4]"></div>
         <div class="flex-1 text-left px-1">
           <h3 class="w-full text-lg text-balance leading-[18px] font-bold mb-2" v-html="title"/>
-          <p class="text-[14px] font-medium mt-1 leading-4" v-if="subtitle" v-html="subtitle"/>
+          <p class="font-medium mt-1 leading-4" v-if="subtitle" v-html="subtitle"/>
         </div>
       </div>
       <div
@@ -27,7 +27,7 @@
             <IconHelm color="var(--color-lila)" class="w-4"/>
             <IconHelm color="var(--color-lila)" class="w-4"/>
           </div>
-          <p class="text-sm text-left">{{ text }}</p>
+          <p class="text-left">{{ text }}</p>
         </div>
       </div>
     </div>
