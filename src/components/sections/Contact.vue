@@ -3,8 +3,8 @@
     class="relative w-full pt-30 pb-20 px-10 bg-gray text-blue flex flex-col items-center justify-center flex-1"
     id="contact"
   >
-    <h2 class="text-4xl font-bold mb-2">¿Tenés un proyecto en mente?</h2>
-    <h3 class="text-xl text-lustria mb-10">Escribinos para ver cómo podemos ayudarte</h3>
+    <h2 class="text-[40px] font-bold">¿Tenés un proyecto en mente?</h2>
+    <h3 class="text-2xl text-lustria mb-10">Escribinos para ver cómo podemos ayudarte</h3>
 
     <form class="w-full max-w-2xl flex flex-col gap-6">
       <div class="flex gap-4">
