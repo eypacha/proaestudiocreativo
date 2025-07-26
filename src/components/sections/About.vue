@@ -1,6 +1,6 @@
 <template>
   <section
-    class="relative pt-40 pb-20 px-4 md:px-10 bg-blue text-gray flex flex-col outline flex-1"
+    class="relative pt-40 pb-20 px-7 md:px-10 bg-blue text-gray flex flex-col outline flex-1"
     id="about"
   >
     <h2
@@ -11,14 +11,12 @@
       <span class="font-bold mr-3 uppercase">Nuestro</span>
       <span
         ref="skewTarget"
-        class="text-lustria text-lila skewed-text inline-block text-[120px]"
-      >
-        rumbo </span
-      ><br />
-      <span class="font-bold text-lila mr-6">PROA</span>
+        class="text-lustria text-lila skewed-text inline-block text-[60px] md:text-[120px]"
+      >rumbo</span><br />
+      <span class="font-bold text-lila mr-3 md:mr-6">PROA</span>
       <span class="font-bold">Estudio Creativo</span>
     </h2>
-    <div class="text-xl w-full mb-10 px-20 font-medium">
+    <div class="text-xl w-full mb-10 md:px-20 font-medium">
       <p class="mb-6">
         En PROA trabajamos con marcas creativas, culturales y con propósito que
         quieren comunicar lo que hacen de forma clara, auténtica y con
@@ -34,22 +32,27 @@
         que sos y conecten con quienes te está buscando
       </p>
     </div>
-    <div class="flex w-full">
-      <div class="w-1/2 flex flex-col justify-center pr-8">
-        <IconHelm class="mb-2" />
-        <p class="uppercase font-bold text-xl w-full">
-          Le damos rumbo a tu marca para que puedas,<br />
-          mostrar y vender con confianza,<br />
+    <div class="flex w-full flex-col md:flex-row">
+      <div class="w-full md:w-1/2 flex flex-col justify-center md:pr-8">
+        <IconHelm class="mb-2"/>
+        <p class="uppercase font-bold md:text-xl w-full text-balance mb-8 md:mb-0">
+          Le damos rumbo a tu marca para que puedas,
+          mostrar y vender con confianza,
           coherencia y alineada a tus valores
         </p>
       </div>
-      <div class="w-1/2 flex flex-col justify-center items-end pl-8">
-        <div class="text-right text-gray text-3xl font-bold">
-          <p class="mr-3 leading-7 mb-2">
+      <div class="w-full md:w-1/2 flex flex-col justify-center items-end pl-8 pt-1 md:pt-0">
+        <div class="text-right text-gray font-bold">
+          <p class="mr-3 leading-4 md:leading-7 mb-2 md:text-3xl">
             Quiero<br />
             encontrar
           </p>
-          <Button label="el rumbo" size="large" />
+          <div class="hidden md:block">
+            <Button label="el rumbo" size="large"/>
+          </div>
+          <div class="md:hidden">
+            <Button label="el rumbo" size="medium" class=""/>
+          </div>
         </div>
       </div>
     </div>

@@ -4,15 +4,15 @@
     id="services"
     ref="servicesSection"
   >
-    <div class="px-10">
-      <div class="flex flex-col md:flex-row p-5 md:p-0 mb-10">
+    <div class="px-7 md:px-10">
+      <div class="flex flex-col md:flex-row md:p-0 md:mb-10">
         <div class="w-full md:w-1/2">
-            <h2 class="text-5xl md:text-8xl font-bold mb-10 w-min mx-auto">
+            <h2 class="text-5xl md:text-8xl font-bold mb-10 md:w-min md:mx-auto">
             ¿En qué
             <span class="text-lustria text-blue">podemos ayudarte?</span>
           </h2>
         </div>
-        <div class="w-full md:w-1/2 text-justify text-xl pr-20 flex flex-col justify-end mb-13 font-medium">
+        <div class="w-full md:w-1/2 text-left md:text-justify text-xl md:pr-20 flex flex-col justify-end mb-13 font-medium">
           <p>
             Te ayudamos a darle forma a lo que hacés para que tu proyecto tenga
             dirección, identidad y presencia.
@@ -28,12 +28,12 @@
         </div>
       </div>
       <div class="flex">
-        <div class="p-4 md:p-0 w-full md:w-1/2">
+        <div class="p-0 w-full md:w-1/2">
           <div class="w-fit mx-auto">
             <IconHelm class="mb-2" />
-            <p class="uppercase font-bold text-xl max-w-130 w-full">
-              No se trata sólo de diseño,<br />
-              se trata de contar bien lo que hacés<br />
+            <p class="uppercase font-bold md:text-xl max-w-130 w-full text-balance">
+              No se trata sólo de diseño,
+              se trata de contar bien lo que hacés
               para conectar con quien lo necesita.
             </p>
           </div>

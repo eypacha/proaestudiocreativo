@@ -3,8 +3,8 @@
     class="relative w-full pt-30 pb-20 px-10 bg-gray text-blue flex flex-col items-center justify-center flex-1"
     id="contact"
   >
-    <h2 class="text-[40px] font-bold">¿Tenés un proyecto en mente?</h2>
-    <h3 class="text-2xl text-lustria mb-10">Escribinos para ver cómo podemos ayudarte</h3>
+    <h2 class="text-3xl md:text-[40px] font-bold leading-8 mb-2 text-center">¿Tenés un proyecto en mente?</h2>
+    <h3 class="text-xl md:text-2xl text-lustria leading-6 mb-10 text-center">Escribinos para ver cómo podemos ayudarte</h3>
 
     <form class="w-full max-w-2xl flex flex-col gap-6">
       <div class="flex gap-4">
@@ -27,7 +27,7 @@
           <label for="mensaje">Mensaje</label>
         </FloatLabel>
       </div>
-      <div class="flex justify-center">
+      <div class="flex justify-center mt-7">
         <Button label="Enviar" class="w-30" />
       </div>
     </form>
