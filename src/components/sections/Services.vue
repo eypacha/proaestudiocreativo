@@ -32,9 +32,9 @@
           <div class="w-fit mx-auto">
             <IconHelm class="mb-2" />
             <p class="uppercase font-bold text-xl max-w-130 w-full">
-              No se trata de sólo de diseño,<br />
-              se trata de contar bien lo que hacés,<br />
-              para conectar con quien lo necesita
+              No se trata sólo de diseño,<br />
+              se trata de contar bien lo que hacés<br />
+              para conectar con quien lo necesita.
             </p>
           </div>
         </div>
@@ -78,17 +78,17 @@ const cards = [
   },
   {
     title: "Gestión Integral de Redes",
-    subtitle: "¿Las redes te demandan más energía de la que querés darles?",
-    text: "Nos encargamos de la creación, planificación y gestión de tus redes sociales, generando contenido relevante y atractivo para tu audiencia.",
+    subtitle: "¿Las redes te demandan más energía de la que querés dedicarles?",
+    text: "Nos encargamos de la creación, planificación y gestión de tus redes sociales, generando contenido de valor y atractivo para tu audiencia.",
   },
   {
     title: "Contenido visual: fotografía & video",
     subtitle:
       "¿Querés mostrar tu proyecto de forma real, creativa y sin poses?",
-    text: "Creamos piezas visuales pensadas para mostrar tu proyecto tal como es: real, dinámico y con identidad. Reels, videos, fotos y contenido detrás de escena que conectan con tu audiencia y transmiten tu forma de trabajar. Sin poses forzadas ni fórmulas vacías.",
+    text: "Creamos piezas visuales pensadas para mostrar tu proyecto tal como es: real, dinámico y con identidad. Reels, videos, fotos y contenido que conectan con tu audiencia y transmiten tu forma de trabajar. Sin poses forzadas ni fórmulas vacías.",
   },
   {
-    title: "Diseño Web & E-Commerce",
+    title: "Diseño & Desarrollo Web",
     subtitle: "¿Querés un sitio que se vea bien y funcione de verdad?",
     text: "Creamos sitios web y tiendas en línea personalizados, optimizados para brindar una experiencia de usuario excepcional y potenciar tus ventas.",
   },
