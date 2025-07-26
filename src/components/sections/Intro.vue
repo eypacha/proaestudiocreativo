@@ -24,10 +24,14 @@
     <div class="text-right text-blue mt-20 md:mt-10">
       <p class="md:text-3xl font-bold mr-5">Conocé lo</p>
       <div class="hidden md:block">
-        <Button label="que hacemos" size="large"/>
+          <a href="#services">
+            <Button label="que hacemos" size="large"/>
+          </a>
       </div>
       <div class="md:hidden">
-        <Button label="que hacemos" size="medium" class=""/>
+        <a href="#services">
+          <Button label="que hacemos" size="medium"/>
+        </a>
       </div>
     </div>
     

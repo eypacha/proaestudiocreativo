@@ -48,10 +48,14 @@
             encontrar
           </p>
           <div class="hidden md:block">
-            <Button label="el rumbo" size="large"/>
+             <a href="#contact">
+              <Button label="el rumbo" size="large"/>
+             </a>
           </div>
           <div class="md:hidden">
-            <Button label="el rumbo" size="medium" class=""/>
+            <a href="#contact">
+              <Button label="el rumbo" size="medium" class=""/>
+            </a>
           </div>
         </div>
       </div>
