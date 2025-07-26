@@ -29,6 +29,8 @@
   --p-button-primary-hover-color: var(--color-gray);
   --p-button-primary-hover-background: var(--color-lila);
   --p-button-primary-hover-border-color: var(--color-orange);
+
+  --p-drawer-background: var(--color-blue);
 }
 
 .p-inputtext {
