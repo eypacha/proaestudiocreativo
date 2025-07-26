@@ -17,7 +17,9 @@
       </ul>
     </div>
     <div class="flex-none hidden md:block">
-      <Button label="Hablemos" class="w-30" />
+      <a href="https://wa.me/5491123964987" target="_blank" rel="noopener">
+          <Button label="Hablemos" class="w-30"/>
+        </a>
     </div>
     <!-- Hamburguesa solo en mobile, alineada a la derecha -->
     <div class="flex-none md:hidden flex items-center">
@@ -51,7 +53,9 @@
         </li>
       </ul>
       <div class="mt-10 flex justify-center">
-        <Button label="Hablemos" class="w-30" @click="drawerVisible = false" />
+        <a href="https://wa.me/5491123964987" target="_blank" rel="noopener">
+          <Button label="Hablemos" class="w-30"/>
+        </a>
       </div>
     </Sidebar>
   </nav>
