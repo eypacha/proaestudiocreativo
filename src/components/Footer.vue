@@ -1,9 +1,16 @@
 <template>
   <div class="waves w-full">
-    <footer class="relative pt-15 pb-20 text-center text-white text-base flex items-center justify-center gap-10">
-      <div v-for="(icon, i) in icons" :key="i" class="bg-lila rounded-full cursor-pointer">
-        <component :is="icon.component" color="#dbdddd" class="w-10 h-10" />
-      </div>
+    <footer class="relative pt-15 pb-20 text-center text-white text-base flex items-center justify-center gap-6 md:gap-10">
+      <a
+        v-for="(icon, i) in icons"
+        :key="i"
+        :href="icon.url"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bg-lila rounded-full cursor-pointer flex items-center justify-center"
+      >
+        <component :is="icon.component"  class="w-10 h-10" />
+      </a>
     </footer>
   </div>
 </template>
@@ -16,10 +23,10 @@ import IconFacebook from "@/components/icons/iconFacebook.vue";
 import IconLinkedin from "@/components/icons/iconLinkedin.vue";
 
 const icons = [
-  { component: IconWhatsapp },
-  { component: IconInstagram },
-  { component: IconEnvelope },
-  { component: IconFacebook },
-  { component: IconLinkedin },
+  { component: IconWhatsapp, url: 'https://wa.me/XXXXXXXXXXX' },
+  { component: IconInstagram, url: 'https://instagram.com/proa.estudiocreativo' },
+  { component: IconEnvelope, url: 'mailto:proaestudiocreativo@gmail.com' },
+  { component: IconFacebook, url: 'https://facebook.com/XXXXXXXXXXX' },
+  { component: IconLinkedin, url: 'https://linkedin.com/in/XXXXXXXXXXX' },
 ];
 </script>
