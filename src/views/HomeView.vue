@@ -27,9 +27,6 @@ import Contact from '@/components/sections/Contact.vue'
 import Footer from '@/components/Footer.vue'
 
 onMounted(() => {
-  // Forzar scroll al inicio
   window.scrollTo(0, 0)
-  // Alternativa más suave
-  // window.scrollTo({ top: 0, behavior: 'smooth' })
 })
 </script>
