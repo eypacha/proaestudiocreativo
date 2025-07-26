@@ -23,10 +23,10 @@ import IconFacebook from "@/components/icons/iconFacebook.vue";
 import IconLinkedin from "@/components/icons/iconLinkedin.vue";
 
 const icons = [
-  { component: IconWhatsapp, url: 'https://wa.me/XXXXXXXXXXX' },
+  { component: IconWhatsapp, url: 'https://wa.me/5491123964987' },
   { component: IconInstagram, url: 'https://instagram.com/proa.estudiocreativo' },
   { component: IconEnvelope, url: 'mailto:proaestudiocreativo@gmail.com' },
-  { component: IconFacebook, url: 'https://facebook.com/XXXXXXXXXXX' },
-  { component: IconLinkedin, url: 'https://linkedin.com/in/XXXXXXXXXXX' },
+  { component: IconFacebook, url: 'https://facebook.com/proaestudiocreativo' },
+  { component: IconLinkedin, url: 'https://linkedin.com/in/proaestudiocreativo' },
 ];
 </script>
