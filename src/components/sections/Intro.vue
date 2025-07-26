@@ -1,11 +1,11 @@
 <template>
-  <section class="p-4 md:p-10 pb-50">
+  <section class="p-7 md:p-10 pb-20 md:pb-20">
     <h2 class="text-5xl md:text-9xl mb-2 text-blue md:leading-26 tracking-tight font-bold">
       Le damos<br/>
       rumbo a<br/>
       tu marca<br/>
       con
-      <span class="inline-block relative h-12 text-lustria text-lila md:text-[7rem] top-2 md:-top-10">
+      <span class="inline-block relative h-12 text-lustria text-lila md:text-[7rem] -mt-2 md:mt-0 top-2 md:-top-10">
         <span
           v-for="(word, wIdx) in adjetives"
           :key="wIdx"
@@ -21,10 +21,16 @@
         </span>
       </span>
     </h2>
-    <div class="text-right text-blue text-3xl font-bold mt-10 md:mt-0">
-      <p class="mr-5">Conocé lo</p>
-      <Button label="que hacemos" size="large"/>
+    <div class="text-right text-blue mt-20 md:mt-10">
+      <p class="md:text-3xl font-bold mr-5">Conocé lo</p>
+      <div class="hidden md:block">
+        <Button label="que hacemos" size="large"/>
+      </div>
+      <div class="md:hidden">
+        <Button label="que hacemos" size="medium" class=""/>
+      </div>
     </div>
+    
   </section>
 </template>
 

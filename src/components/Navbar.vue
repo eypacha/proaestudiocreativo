@@ -23,9 +23,9 @@
     <div class="flex-none md:hidden flex items-center">
       <button @click="drawerVisible = true" aria-label="Abrir menú">
         <svg width="32" height="32" fill="none" viewBox="0 0 32 32">
-          <rect y="7" width="32" height="3" rx="1.5" fill="currentColor"/>
-          <rect y="14" width="32" height="3" rx="1.5" fill="currentColor"/>
-          <rect y="21" width="32" height="3" rx="1.5" fill="currentColor"/>
+          <rect y="7" width="32" height="3" rx="1.5" fill="var(--color-blue)"/>
+          <rect y="14" width="32" height="3" rx="1.5" fill="var(--color-blue)"/>
+          <rect y="21" width="32" height="3" rx="1.5" fill="var(--color-blue)"/>
         </svg>
       </button>
     </div>
