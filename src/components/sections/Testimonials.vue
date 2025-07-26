@@ -1,5 +1,5 @@
 <template>
-  <section class="relative p-40 px-4 md:px-10 bg-gray text-blue flex flex-col items-center justify-center" id="testimonials">
+  <section class="relative pb-20 pt-40 px-4 md:px-10 bg-gray text-blue flex flex-col items-center justify-center" id="testimonials">
     <h2 class="uppercase text-center">
       <span class="font-bold text-3xl md:text-[40px]">Historias que encontraro rumbo y dirección,<br/></span>
       <span class="text-lustria text-3xl md:text-4xl">que nos recuerdan por qué hacemos lo que hacemos</span>
