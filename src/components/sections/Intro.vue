@@ -1,11 +1,11 @@
 <template>
   <section class="p-7 md:p-10 pb-20 md:pb-20">
-    <h2 class="text-5xl md:text-9xl mb-2 text-blue md:leading-26 tracking-tight font-bold">
+    <h2 class="text-5xl md:text-8xl lg:text-9xl mb-2 text-blue md:leading-24 lg:leading-26 tracking-tight font-bold">
       Le damos<br/>
       rumbo a<br/>
       tu marca<br/>
       con
-      <span class="inline-block relative h-12 text-lustria text-lila md:text-[7rem] -mt-2 md:mt-0 top-2 md:-top-10">
+      <span class="inline-block relative h-12 text-lustria text-lila md:text-[6rem] lg:text-[7rem] -mt-2 md:mt-0 top-2 md:-top-8 lg:-top-10">
         <span
           v-for="(word, wIdx) in adjetives"
           :key="wIdx"

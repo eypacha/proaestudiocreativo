@@ -5,14 +5,14 @@
     ref="servicesSection"
   >
     <div class="px-7 md:px-10">
-      <div class="flex flex-col md:flex-row md:p-0 md:mb-10">
-        <div class="w-full md:w-1/2">
-            <h2 class="text-5xl md:text-8xl font-bold mb-10 md:w-min md:mx-auto">
+      <div class="flex flex-col md:flex-row lg:p-0 lg:mb-10">
+        <div class="w-full lg:w-1/2">
+            <h2 class="text-5xl md:text-7xl lg:text-8xl font-bold mb-10 lg:w-min lg:mx-auto">
             ¿En qué
             <span class="text-lustria text-blue">podemos ayudarte?</span>
           </h2>
         </div>
-        <div class="w-full md:w-1/2 text-left md:text-justify text-xl md:pr-20 flex flex-col justify-end mb-13 font-medium">
+        <div class="w-full lg :w-1/2 text-left lg:text-justify text-xl lg:pr-20 flex flex-col justify-end mb-13 font-medium">
           <p>
             Te ayudamos a darle forma a lo que hacés para que tu proyecto tenga
             dirección, identidad y presencia.
