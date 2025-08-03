@@ -5,14 +5,14 @@
     ref="servicesSection"
   >
     <div class="px-7 md:px-10">
-      <div class="flex flex-col md:flex-row lg:p-0 lg:mb-10">
+      <div class="flex flex-col lg:flex-row lg:p-0 lg:mb-10">
         <div class="w-full lg:w-1/2">
-            <h2 class="text-5xl md:text-7xl lg:text-8xl font-bold mb-10 lg:w-min lg:mx-auto">
+            <h2 class="text-5xl md:text-7xl lg:text-8xl font-bold mb-10 lg:w-min lg:mx-auto max-w-[400px]">
             ¿En qué
             <span class="text-lustria text-blue">podemos ayudarte?</span>
           </h2>
         </div>
-        <div class="w-full lg :w-1/2 text-left lg:text-justify text-xl lg:pr-20 flex flex-col justify-end mb-13 font-medium">
+        <div class="w-full lg:w-1/2 text-left lg:text-justify text-xl lg:pr-20 flex flex-col justify-end mb-13 font-medium">
           <p>
             Te ayudamos a darle forma a lo que hacés para que tu proyecto tenga
             dirección, identidad y presencia.
@@ -28,10 +28,10 @@
         </div>
       </div>
       <div class="flex">
-        <div class="p-0 w-full md:w-1/2">
+        <div class="p-0 w-full lg:w-1/2">
           <div class="w-fit mx-auto">
             <IconHelm class="mb-2" />
-            <p class="uppercase font-bold md:text-xl max-w-130 w-full text-balance">
+            <p class="uppercase font-bold md:text-xl lg:max-w-130 w-full text-balance">
               No se trata sólo de diseño,
               se trata de contar bien lo que hacés
               para conectar con quien lo necesita.
@@ -54,7 +54,7 @@
             :title="card.title"
             :subtitle="card.subtitle"
             :text="card.text"
-            :class="{ 'md:mt-8': i % 2 == 0 }"
+            :class="{ 'lg:mt-8': i % 2 == 0 }"
           />
         </div>
       </div>
