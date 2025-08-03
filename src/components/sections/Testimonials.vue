@@ -9,7 +9,7 @@
         <Testimonial text="La asesoría me sirvió muchísimo. No había pensado mi esquema de trabajo en redes de una forma tan clara y me di cuenta de que me faltaban herramientas para saber qué decir, qué es realmente útil y qué no. Me fui muy contenta y súper agradecida, además el encuentro duró más de lo previsto y sentí que se dedicaron a fondo." name="Karen, Tinto Rebelde"/>
       </div>
       <div class="flex-1">
-        <Testimonial text="La asesoría me sirvió muchísimo. No había pensado mi esquema de trabajo en redes de una forma tan clara y me di cuenta de que me faltaban herramientas para saber qué decir, qué es realmente útil y qué no. Me fui muy contenta y súper agradecida, además el encuentro duró más de lo previsto y sentí que se dedicaron a fondo." name="Karen, Tinto Rebelde"/>
+        <Testimonial text="Lo que más valoro del proceso juntas es tu dedicación, paciencia y buena onda. Me sorprendió cómo pequeños detalles lograron mejorar tanto la imagen, la interacción con el público y nuestra forma de comunicar. Siempre nos explicás el cómo y el por qué de cada decisión, y respondés con claridad nuestras dudas. La comunicación se volvió más organizada y auténtica, y eso se notó: hubo muy buena reacción del público ante los cambios, valorando las mejoras en la imagen, los diseños y el contenido." name="Vale y Mica, Amaru Circo"/>
       </div>
       <div class="flex-1">
         <Testimonial 
