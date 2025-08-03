@@ -3,8 +3,8 @@
     class="navbar w-full flex items-center justify-between top-0 fixed px-8 py-5 z-3 transition-colors duration-100"
     :style="{ backgroundColor: color }"
   >
-    <div class="flex-1 flex justify-center md:flex">
-      <ul class="hidden md:flex gap-0">
+    <div class="flex-1 flex justify-center lg:flex">
+      <ul class="hidden lg:flex gap-0">
         <li v-for="(section, i) in sections" :key="i">
           <a
             class="text-lg transition-colors text-blue hover:text-lustria"
@@ -16,13 +16,13 @@
         </li>
       </ul>
     </div>
-    <div class="flex-none hidden md:block">
+    <div class="flex-none hidden lg:block">
       <a href="https://wa.me/5491123964987" target="_blank" rel="noopener">
           <Button label="Hablemos" class="w-30"/>
         </a>
     </div>
     <!-- Hamburguesa solo en mobile, alineada a la derecha -->
-    <div class="flex-none md:hidden flex items-center">
+    <div class="flex-none lg:hidden flex items-center">
       <button @click="drawerVisible = true" aria-label="Abrir menú">
         <svg width="32" height="32" fill="none" viewBox="0 0 32 32">
           <rect y="7" width="32" height="3" rx="1.5" fill="var(--color-blue)"/>
@@ -32,7 +32,7 @@
       </button>
     </div>
     <!-- Drawer para mobile -->
-    <Sidebar v-model:visible="drawerVisible" position="right" class="md:hidden" :style="{ width: '166px' }" :showCloseIcon="false">
+    <Sidebar v-model:visible="drawerVisible" position="right" class="lg:hidden" :style="{ width: '166px' }" :showCloseIcon="false">
       <div class="flex justify-end p-4">
         <button @click="drawerVisible = false" aria-label="Cerrar menú" class="text-2xl text-gray hover:text-blue focus:outline-none">
           <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
