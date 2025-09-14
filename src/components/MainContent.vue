@@ -52,6 +52,8 @@ const acciones = [
   'atacar',
   'romper',
   'abrir',
+  'lanzar',
+  'leer',
 ];
 
 const selectedVerb = ref(null); // índice del verbo seleccionado
