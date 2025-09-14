@@ -1,8 +1,8 @@
 
 <template>
   <div class="home-view">
-  <AdventurePrompt v-if="!hasUserMessage" />
-  <MainContent v-else />
+    <AdventurePrompt v-if="!hasUserMessage" />
+    <MainContent v-else />
   </div>
 </template>
 
