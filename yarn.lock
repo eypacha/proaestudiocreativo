@@ -413,6 +413,24 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.25.5.tgz#7fc114af5f6563f19f73324b5d5ff36ece0803d1"
   integrity sha512-TXv6YnJ8ZMVdX+SXWVBo/0p8LTcrUYngpWjvm91TMjjBQii7Oz11Lw5lbDV5Y0TzuhSJHwiH4hEtC1I42mMS0g==
 
+"@huggingface/inference@^4.8.0":
+  version "4.8.0"
+  resolved "https://registry.yarnpkg.com/@huggingface/inference/-/inference-4.8.0.tgz#6cac7445b70a77d6d7160c1f1c6fac4c57b7c3a8"
+  integrity sha512-Eq98EAXqYn4rKMfrbEXuhc3IjKfaeIO6eXNOZk9xk6v5akrIWRtd6d1h0fjAWyX4zRbdUpXRh6MvsqXnzGvXCA==
+  dependencies:
+    "@huggingface/jinja" "^0.5.1"
+    "@huggingface/tasks" "^0.19.45"
+
+"@huggingface/jinja@^0.5.1":
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/@huggingface/jinja/-/jinja-0.5.1.tgz#081d334ddcf6237f65561ae3d665bb713a8ff74f"
+  integrity sha512-yUZLld4lrM9iFxHCwFQ7D1HW2MWMwSbeB7WzWqFYDWK+rEb+WldkLdAJxUPOmgICMHZLzZGVcVjFh3w/YGubng==
+
+"@huggingface/tasks@^0.19.45":
+  version "0.19.45"
+  resolved "https://registry.yarnpkg.com/@huggingface/tasks/-/tasks-0.19.45.tgz#74bbd83152a2147b8df6bf476b61451bca0fc67c"
+  integrity sha512-lM3QOgbfkGZ5gAZOYWOmzMM6BbKcXOIHjgnUAoymTdZEcEcGSr0vy/LWGEiK+vBXC4vU+sCT+WNoA/JZ8TEWdA==
+
 "@intlify/core-base@9.14.4":
   version "9.14.4"
   resolved "https://registry.npmjs.org/@intlify/core-base/-/core-base-9.14.4.tgz"
@@ -968,6 +986,13 @@
   resolved "https://registry.npmjs.org/@vue/devtools-api/-/devtools-api-6.6.4.tgz"
   integrity sha512-sGhTPMuXqZ1rVOk32RylztWkfXTRhuS7vgAKv0zjqk8gbsHkJ7xfFf+jbySxt7tWObEJwyKaHMikV/WGDiQm8g==
 
+"@vue/devtools-api@^7.7.2":
+  version "7.7.7"
+  resolved "https://registry.yarnpkg.com/@vue/devtools-api/-/devtools-api-7.7.7.tgz#5ef5f55f60396220725a273548c0d7ee983d5d34"
+  integrity sha512-lwOnNBH2e7x1fIIbVT7yF5D+YWhqELm55/4ZKf45R9T8r9dE2AIOy8HKjfqzGsoTHFbWbr337O4E0A0QADnjBg==
+  dependencies:
+    "@vue/devtools-kit" "^7.7.7"
+
 "@vue/devtools-core@^7.7.6":
   version "7.7.6"
   resolved "https://registry.npmjs.org/@vue/devtools-core/-/devtools-core-7.7.6.tgz"
@@ -993,10 +1018,30 @@
     speakingurl "^14.0.1"
     superjson "^2.2.2"
 
+"@vue/devtools-kit@^7.7.7":
+  version "7.7.7"
+  resolved "https://registry.yarnpkg.com/@vue/devtools-kit/-/devtools-kit-7.7.7.tgz#41a64f9526e9363331c72405544df020ce2e3641"
+  integrity sha512-wgoZtxcTta65cnZ1Q6MbAfePVFxfM+gq0saaeytoph7nEa7yMXoi6sCPy4ufO111B9msnw0VOWjPEFCXuAKRHA==
+  dependencies:
+    "@vue/devtools-shared" "^7.7.7"
+    birpc "^2.3.0"
+    hookable "^5.5.3"
+    mitt "^3.0.1"
+    perfect-debounce "^1.0.0"
+    speakingurl "^14.0.1"
+    superjson "^2.2.2"
+
 "@vue/devtools-shared@^7.7.6":
   version "7.7.6"
   resolved "https://registry.npmjs.org/@vue/devtools-shared/-/devtools-shared-7.7.6.tgz"
   integrity sha512-yFEgJZ/WblEsojQQceuyK6FzpFDx4kqrz2ohInxNj5/DnhoX023upTv4OD6lNPLAA5LLkbwPVb10o/7b+Y4FVA==
+  dependencies:
+    rfdc "^1.4.1"
+
+"@vue/devtools-shared@^7.7.7":
+  version "7.7.7"
+  resolved "https://registry.yarnpkg.com/@vue/devtools-shared/-/devtools-shared-7.7.7.tgz#ff14aa8c1262ebac8c0397d3b09f767cd489750c"
+  integrity sha512-+udSj47aRl5aKb0memBvcUG9koarqnxNM5yjuREvqwK6T3ap4mn3Zqqc17QrBFTqSMjr3HK1cvStEZpMDpfdyw==
   dependencies:
     rfdc "^1.4.1"
 
@@ -3502,6 +3547,13 @@ pify@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/pify/-/pify-4.0.1.tgz#4b2cd25c50d598735c50292224fd8c6df41e3231"
   integrity sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==
+
+pinia@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/pinia/-/pinia-3.0.3.tgz#f412019bdeb2f45e85927b432803190343e12d89"
+  integrity sha512-ttXO/InUULUXkMHpTdp9Fj4hLpD/2AoJdmAbAeW2yu1iy1k+pkFekQXw5VpC0/5p51IOR/jDaDRfRWRnMMsGOA==
+  dependencies:
+    "@vue/devtools-api" "^7.7.2"
 
 pinkie-promise@^2.0.0:
   version "2.0.1"
