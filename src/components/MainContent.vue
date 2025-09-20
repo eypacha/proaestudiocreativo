@@ -9,7 +9,7 @@
       >{{ parsedAssistant.title || 'Escena' }}</h2>
       <div
         v-if="parsedAssistant"
-        class="transition-opacity duration-700 p-4 rounded-md flex-1 min-h-[200px] overflow-y-auto"
+        class="transition-opacity duration-700 rounded-md flex-1 min-h-[200px] overflow-y-auto"
         :style="{ opacity: showText ? 1 : 0 }"
       >{{ typewriterText }}</div>
       <div v-if="parsedAssistant && parsedAssistant.actions && parsedAssistant.actions.length">
