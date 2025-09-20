@@ -5,14 +5,13 @@
       id="prompt-input"
       v-model="userPrompt"
       type="text"
-      placeholder="una carpa de circo abandonada"
+      :placeholder="examplePhrases[currentExampleIdx]"
       @keyup.enter="submitPrompt"
       class="border border-gray-300 rounded-md px-4 py-2 text-base focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
     />
     <button
       @click="submitPrompt"
       class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-md transition disabled:opacity-50"
-      :disabled="!userPrompt.trim()"
     >
       Comenzar
     </button>
@@ -20,17 +19,26 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import { useChatStore } from '../stores/chat';
-import { getLLMText } from '../llm';
-
-const userPrompt = ref("una vieja fábrica de robots abandonada");
+import { examplePhrases } from '../constants/examplePhrases';
+const currentExampleIdx = ref(0);
+const userPrompt = ref("");
 const chat = useChatStore();
+let intervalId = null;
+
+onMounted(() => {
+  intervalId = setInterval(() => {
+    currentExampleIdx.value = (currentExampleIdx.value + 1) % examplePhrases.length;
+  }, 2000);
+});
+onUnmounted(() => {
+  if (intervalId) clearInterval(intervalId);
+});
 
 async function submitPrompt() {
-  if (!userPrompt.value.trim()) return;
+  const promptText = userPrompt.value.trim() || examplePhrases[currentExampleIdx.value];
+  if (!promptText) return;
   chat.clearMessages();
-  const prompt = `Cuentame una historia sobre ${userPrompt.value.trim()}`;
+  const prompt = `Cuentame una historia sobre ${promptText}`;
   chat.addMessage({ role: 'user', content: prompt });
   userPrompt.value = "";
 
@@ -44,6 +52,3 @@ async function submitPrompt() {
   }
 }
 </script>
-
-<style scoped>
-</style>
