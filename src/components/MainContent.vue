@@ -23,6 +23,12 @@
             </li>
           </ul>
         </div>
+            <div v-if="parsedAssistant && parsedAssistant.phase === 'end'" class="flex justify-center mt-8">
+              <button
+                class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded shadow transition-colors duration-200"
+                @click="restartStory"
+              >Volver a empezar</button>
+            </div>
       </div>
     </div>
   </div>
@@ -53,6 +59,9 @@ const showText = ref(false);
 const showActions = ref([false, false, false]);
 const loading = ref(false);
 
+function restartStory() {
+  chat.clearMessages();
+}
 async function handleActionClick(accion) {
   if (loading.value) return;
   loading.value = true;

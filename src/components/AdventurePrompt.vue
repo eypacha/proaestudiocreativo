@@ -23,14 +23,18 @@ import { ref, onMounted, onUnmounted } from 'vue';
 import { examplePhrases } from '../constants/examplePhrases';
 import { useChatStore } from '../stores/chat';
 import { getLLMText } from '../llm';
-const currentExampleIdx = ref(0);
+const currentExampleIdx = ref(Math.floor(Math.random() * examplePhrases.length));
 const userPrompt = ref("");
 const chat = useChatStore();
 let intervalId = null;
 
 onMounted(() => {
   intervalId = setInterval(() => {
-    currentExampleIdx.value = (currentExampleIdx.value + 1) % examplePhrases.length;
+    let nextIdx;
+    do {
+      nextIdx = Math.floor(Math.random() * examplePhrases.length);
+    } while (nextIdx === currentExampleIdx.value && examplePhrases.length > 1);
+    currentExampleIdx.value = nextIdx;
   }, 2000);
 });
 onUnmounted(() => {
