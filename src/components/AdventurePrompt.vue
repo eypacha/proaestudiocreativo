@@ -19,7 +19,10 @@
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
 import { examplePhrases } from '../constants/examplePhrases';
+import { useChatStore } from '../stores/chat';
+import { getLLMText } from '../llm';
 const currentExampleIdx = ref(0);
 const userPrompt = ref("");
 const chat = useChatStore();
