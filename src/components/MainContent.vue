@@ -7,23 +7,21 @@
           class="text-xl font-bold text-blue-700 transition-opacity duration-700"
           :style="{ opacity: showTitle ? 1 : 0 }"
         >{{ typewriterTitle }}</h2>
-          <template v-if="chat.messages.filter(m => m.role === 'assistant').length > 1">
-            <div
-              class="transition-opacity duration-700 rounded-md h-[440px] overflow-y-auto"
-              :style="{ opacity: showText ? 1 : 0 }"
-            >{{ typewriterText }}</div>
-            <div v-if="parsedAssistant.actions && parsedAssistant.actions.length" class="mt-8 outline-dashed outline-1 outline-gray-300">
-              <ul class="flex flex-wrap gap-4">
-                <li v-for="(accion, idx) in parsedAssistant.actions" :key="accion">
-                  <div
-                    class="bg-blue-100 cursor-pointer text-blue-800 px-3 py-1 rounded-full text-base font-medium transition-opacity duration-700"
-                    :style="{ opacity: showActions[idx] ? 1 : 0, pointerEvents: showActions[idx] ? 'auto' : 'none' }"
-                    @click="handleActionClick(accion)"
-                  >{{ accion }}</div>
-                </li>
-              </ul>
-            </div>
-          </template>
+        <div
+          class="transition-opacity duration-700 rounded-md h-[440px] overflow-y-auto"
+          :style="{ opacity: showText ? 1 : 0 }"
+        >{{ typewriterText }}</div>
+        <div v-if="parsedAssistant.actions && parsedAssistant.actions.length">
+          <ul class="flex flex-wrap gap-4 ">
+            <li v-for="(accion, idx) in parsedAssistant.actions" :key="accion">
+              <div
+                class="bg-blue-100 cursor-pointer text-blue-800 px-3 py-1 rounded-full text-base font-medium transition-opacity duration-700"
+                :style="{ opacity: showActions[idx] ? 1 : 0, pointerEvents: showActions[idx] ? 'auto' : 'none' }"
+                @click="handleActionClick(accion)"
+              >{{ accion }}</div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
