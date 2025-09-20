@@ -1,21 +1,22 @@
 <template>
-  <div class="main-content w-full max-w-2xl mx-auto mt-8 p-6 bg-white/90 rounded-xl shadow-lg min-h-[700px] flex flex-col">
+  <div class="main-content w-full max-w-2xl mx-auto mt-8 p-6 bg-white/90 rounded-xl shadow-lg h-[750px] flex flex-col">
     <div class="flex flex-col flex-1 text-gray-800 text-lg" style="white-space: normal; word-break: break-word;">
       <div v-if="loading || !parsedAssistant" class="text-gray-400 italic flex-1 flex items-center justify-center text-2xl">...</div>
-      <div v-else class="flex flex-col flex-1 gap-6">
-        <h2
-          class="text-xl font-bold text-blue-700 transition-opacity duration-700"
-          :style="{ opacity: showTitle ? 1 : 0 }"
-        >{{ typewriterTitle }}</h2>
-        <div
-          class="transition-opacity duration-700 rounded-md h-[440px] overflow-y-auto"
-          :style="{ opacity: showText ? 1 : 0 }"
-        >{{ typewriterText }}</div>
-        <div v-if="parsedAssistant.actions && parsedAssistant.actions.length">
+      <div v-else class="flex flex-col flex-1 gap-6 justify-between">
+          <h2
+            v-if="parsedAssistant && parsedAssistant.phase === 'start'"
+            class="text-xl font-bold text-blue-700 transition-opacity duration-700"
+            :style="{ opacity: showTitle ? 1 : 0 }"
+          >{{ typewriterTitle }}</h2>
+          <div
+            class="transition-opacity duration-700 rounded-md h-[440px] overflow-y-auto"
+            :style="{ opacity: showText ? 1 : 0 }"
+          >{{ typewriterText }}</div>
+          <div v-if="parsedAssistant && parsedAssistant.actions && parsedAssistant.actions.length && parsedAssistant.phase !== 'end'">
           <ul class="flex flex-wrap gap-4 ">
             <li v-for="(accion, idx) in parsedAssistant.actions" :key="accion">
               <div
-                class="bg-blue-100 cursor-pointer text-blue-800 px-3 py-1 rounded-full text-base font-medium transition-opacity duration-700"
+                class="bg-blue-100 cursor-pointer text-blue-800 px-3 py-1 rounded text-base font-medium transition-opacity duration-700"
                 :style="{ opacity: showActions[idx] ? 1 : 0, pointerEvents: showActions[idx] ? 'auto' : 'none' }"
                 @click="handleActionClick(accion)"
               >{{ accion }}</div>
